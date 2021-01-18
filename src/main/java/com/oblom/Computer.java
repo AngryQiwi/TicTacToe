@@ -1,3 +1,4 @@
+
 package com.oblom;
 
 public class Computer extends Player{
@@ -69,30 +70,16 @@ public class Computer extends Player{
         if (cellContent13 == 1 && cellContent31 == 1 && cellContent22 == 0) return 22;
         if (cellContent22 == 1 && cellContent31 == 1 && cellContent13 == 0) return 13;
 
-        if (cellContent11 == 1 && cellContent12 == 1 && cellContent13 == 0) return 13;
-        if (cellContent11 == 1 && cellContent13 == 1 && cellContent12 == 0) return 12;
-        if (cellContent12 == 1 && cellContent13 == 1 && cellContent11 == 0) return 11;
-        if (cellContent21 == 1 && cellContent22 == 1 && cellContent23 == 0) return 23;
-        if (cellContent21 == 1 && cellContent23 == 1 && cellContent22 == 0) return 22;
-        if (cellContent22 == 1 && cellContent23 == 1 && cellContent21 == 0) return 21;
-        if (cellContent31 == 1 && cellContent32 == 1 && cellContent33 == 0) return 33;
-        if (cellContent31 == 1 && cellContent33 == 1 && cellContent32 == 0) return 32;
-        if (cellContent32 == 1 && cellContent33 == 1 && cellContent31 == 0) return 31;
-        if (cellContent11 == 1 && cellContent21 == 1 && cellContent31 == 0) return 31;
-        if (cellContent11 == 1 && cellContent31 == 1 && cellContent21 == 0) return 21;
-        if (cellContent21 == 1 && cellContent31 == 1 && cellContent11 == 0) return 11;
-        if (cellContent12 == 1 && cellContent32 == 1 && cellContent22 == 0) return 22;
-        if (cellContent12 == 1 && cellContent22 == 1 && cellContent32 == 0) return 32;
-        if (cellContent22 == 1 && cellContent32 == 1 && cellContent12 == 0) return 12;
-        if (cellContent13 == 1 && cellContent23 == 1 && cellContent33 == 0) return 33;
-        if (cellContent23 == 1 && cellContent33 == 1 && cellContent13 == 0) return 13;
-        if (cellContent13 == 1 && cellContent33 == 1 && cellContent23 == 0) return 23;
-        if (cellContent11 == 1 && cellContent22 == 1 && cellContent33 == 0) return 33;
-        if (cellContent11 == 1 && cellContent33 == 1 && cellContent22 == 0) return 22;
-        if (cellContent22 == 1 && cellContent33 == 1 && cellContent11 == 0) return 11;
-        if (cellContent13 == 1 && cellContent22 == 1 && cellContent31 == 0) return 31;
-        if (cellContent13 == 1 && cellContent31 == 1 && cellContent22 == 0) return 22;
-        if (cellContent22 == 1 && cellContent31 == 1 && cellContent13 == 0) return 13;
+        if (cellContent13 == 0) return 13;
+        if (cellContent12 == 0) return 12;
+        if (cellContent11 == 0) return 11;
+        if (cellContent23 == 0) return 23;
+        if (cellContent22 == 0) return 22;
+        if (cellContent21 == 0) return 21;
+        if (cellContent33 == 0) return 33;
+        if (cellContent32 == 0) return 32;
+        if (cellContent31 == 0) return 31;
+
         return 0;
     }
 }
