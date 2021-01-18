@@ -258,7 +258,7 @@ public class HelloController {
             cell11.setContent(2);
             InfoLabel.setText("Player 1 Turn");
         }
-        checkWinner();
+        if (checkWinner()) return;
         Move += 1;
         int place;
         if (Move % 2 != 0 && getMode() <= 2) {
@@ -269,7 +269,7 @@ public class HelloController {
 
         }
 
-        checkWinner();
+        if (checkWinner()) return;
     }
 
     public void makeAMove12(MouseEvent mouseEvent) {
@@ -286,7 +286,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
 
         Move += 1;
         int place;
@@ -297,7 +297,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
     }
 
     public void makeAMove13(MouseEvent mouseEvent) {
@@ -315,7 +315,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
 
         Move += 1;
         int place;
@@ -326,7 +326,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
     }
 
     public void makeAMove21(MouseEvent mouseEvent) {
@@ -344,7 +344,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
 
         Move += 1;
         int place;
@@ -355,7 +355,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
     }
 
     public void makeAMove22(MouseEvent mouseEvent) {
@@ -373,7 +373,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
 
         Move += 1;
         int place;
@@ -384,7 +384,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
     }
 
     public void makeAMove23(MouseEvent mouseEvent) {
@@ -402,7 +402,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
 
         Move += 1;
         int place;
@@ -413,7 +413,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
     }
 
     public void makeAMove31(MouseEvent mouseEvent) {
@@ -431,7 +431,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
 
         Move += 1;
         int place;
@@ -443,7 +443,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
     }
 
     public void makeAMove32(MouseEvent mouseEvent) {
@@ -461,7 +461,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
 
         Move += 1;
         int place;
@@ -472,7 +472,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
     }
 
     public void makeAMove33(MouseEvent mouseEvent) {
@@ -490,7 +490,7 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
 
         Move += 1;
         int place;
@@ -501,10 +501,10 @@ public class HelloController {
             InfoLabel.setText("Player 1 Turn");
 
         }
-        checkWinner();
+        if (checkWinner()) return;
     }
 
-    public void checkWinner() {
+    public boolean checkWinner() {
         int WinCheck = 0;
         if (cell11.getContent() == 1 && cell12.getContent() == 1 && cell13.getContent() == 1) {
             WinH1.setVisible(true);
@@ -570,8 +570,9 @@ public class HelloController {
             WinD2.setVisible(true);
             WinCheck = 2;
         }
-        if (WinCheck != 0) {
+        if (WinCheck != 0 || Move == 9) {
             RetryButton.setDisable(false);
+            InfoLabel.setText("Draw");
             if (WinCheck == 1) {
                 InfoLabel.setText("Crosses Win");
                 P1Score += 1;
@@ -592,9 +593,11 @@ public class HelloController {
             Cell31.setDisable(true);
             Cell32.setDisable(true);
             Cell33.setDisable(true);
+            return true;
 
         }
 
+        return false;
     }
 
     public void computerMoveWriter(int Place) {
