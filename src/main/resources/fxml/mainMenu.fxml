@@ -9,7 +9,7 @@
 <?import org.tbee.javafx.scene.layout.fxml.*?>
 
 
-<SplitPane id="rootPane" dividerPositions="0.23665893271461716" orientation="VERTICAL" prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane id="rootPane" dividerPositions="0.25" orientation="VERTICAL" prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oblom.HelloController">
    <items>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
@@ -31,21 +31,12 @@
                               <Font name="LilyUPC" size="40.0" />
                            </font>
                         </Label>
-                        <Button fx:id="PVESetDifEasy" layoutX="33.0" layoutY="68.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Easy">
+                        <Button fx:id="PVESetDifEasy" layoutX="33.0" layoutY="68.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Play" onAction="#openGameFieldEasy">
                            <font>
                               <Font name="LilyUPC" size="24.0" />
                            </font>
                         </Button>
-                        <Button fx:id="PVESetDifNorm" layoutX="33.0" layoutY="118.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Normal">
-                           <font>
-                              <Font name="LilyUPC" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="PVESetDifHard" layoutX="33.0" layoutY="169.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Hard">
-                           <font>
-                              <Font name="LilyUPC" size="24.0" />
-                           </font>
-                        </Button>
+
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="335.0">
@@ -55,12 +46,7 @@
                               <Font name="LilyUPC" size="40.0" />
                            </font>
                         </Label>
-                        <Button fx:id="PVPSetModeStandart" layoutX="33.0" layoutY="69.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Standart">
-                           <font>
-                              <Font name="LilyUPC" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="PVPSetModeSpeedrun" layoutX="33.0" layoutY="118.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Speedrun">
+                        <Button fx:id="PVPSetModeStandart" layoutX="33.0" layoutY="69.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="230.0" text="Play" onAction="#openGameFieldPVPStandart">
                            <font>
                               <Font name="LilyUPC" size="24.0" />
                            </font>
@@ -69,12 +55,7 @@
                   </AnchorPane>
               </items>
             </SplitPane>
-            <Button fx:id="HighScoresButton" layoutX="14.0" layoutY="273.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" text="High Scores">
-               <font>
-                  <Font name="LilyUPC" size="21.0" />
-               </font>
-            </Button>
-            <Button fx:id="ExitButton" layoutX="484.0" layoutY="273.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" text="Exit">
+            <Button fx:id="ExitButton" layoutX="484.0" layoutY="273.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" text="Exit" onAction="#closeProgram">
                <font>
                   <Font name="LilyUPC" size="21.0" />
                </font>

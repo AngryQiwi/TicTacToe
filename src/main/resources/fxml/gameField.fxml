@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.32274247491638797" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oblom.HelloController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="160.0" text="TicTacToe">
+               <font>
+                  <Font name="LilyUPC" size="56.0" />
+               </font>
+            </Label>
+            <Button fx:id="PauseButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Pause" />
+            <Button fx:id="MainMenuButton" layoutX="97.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Main Menu" onAction="#openMainMenu"/>
+            <Label layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="77.0" text="Player 1">
+               <font>
+                  <Font name="LilyUPC" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="P1ScoreOrWSLabel" layoutX="12.0" layoutY="104.0" prefHeight="20.0" prefWidth="72.0" text="Score:" />
+            <Label fx:id="PlayerOrComputerLabel" layoutX="14.0" layoutY="126.0" prefHeight="25.0" prefWidth="77.0" text="Player 2">
+               <font>
+                  <Font name="LilyUPC" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="P2ScoreOrWSLabel" layoutX="14.0" layoutY="157.0" prefHeight="25.0" prefWidth="38.0" text="Score:" />
+            <Label fx:id="Player2ScoreOrWS" layoutX="83.0" layoutY="160.0" prefHeight="20.0" prefWidth="80.0" text="0" />
+            <Label fx:id="Player1ScoreOrWS" layoutX="83.0" layoutY="104.0" prefHeight="20.0" prefWidth="80.0" text="0" />
+            <Button fx:id="RetryButton" disable="true" layoutX="15.0" layoutY="327.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Retry" onAction="#retryGame"/>
+            <Label fx:id="InfoLabel" layoutX="14.0" layoutY="287.0" prefHeight="30.0" prefWidth="157.0" text="Press Start" />
+            <Button fx:id="StartButton" layoutX="97.0" layoutY="327.0" mnemonicParsing="false" onAction="#startGame" prefHeight="25.0" prefWidth="77.0" text="Start" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="398.0" prefWidth="365.0">
+         <children>
+            <Rectangle fx:id="Cell11" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="51.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove11" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="Cell21" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="51.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove21" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="Cell31" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="51.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove31" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="Cell22" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="151.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove22" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="Cell12" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="151.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove12" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="Cell32" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="151.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove32" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="Cell13" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="251.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove13" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="Cell23" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="251.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove23" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="Cell33" arcHeight="5.0" arcWidth="1.0" fill="WHITE" height="100.0" layoutX="251.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="100.0" onMouseClicked="#makeAMove33" disable="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Circle fx:id="Circle11" fill="WHITE" layoutX="101.0" layoutY="99.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Circle fx:id="Circle12" fill="WHITE" layoutX="201.0" layoutY="99.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Circle fx:id="Circle13" fill="WHITE" layoutX="301.0" layoutY="99.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Circle fx:id="Circle21" fill="WHITE" layoutX="101.0" layoutY="199.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Circle fx:id="Circle22" fill="WHITE" layoutX="201.0" layoutY="199.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Circle fx:id="Circle23" fill="WHITE" layoutX="301.0" layoutY="199.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Circle fx:id="Circle31" fill="WHITE" layoutX="101.0" layoutY="299.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Circle fx:id="Circle32" fill="WHITE" layoutX="201.0" layoutY="299.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Circle fx:id="Circle33" fill="WHITE" layoutX="301.0" layoutY="299.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross111" endX="50.0" layoutX="101.0" layoutY="99.0" rotate="-135.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross112" endX="50.0" layoutX="100.0" layoutY="99.0" rotate="-53.1" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross121" endX="50.0" layoutX="200.0" layoutY="99.0" rotate="-53.1" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross122" endX="50.0" layoutX="200.0" layoutY="98.0" rotate="45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line endX="50.0" layoutX="297.0" layoutY="97.0" rotate="45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross132" endX="50.0" layoutX="297.0" layoutY="97.0" rotate="45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross131" endX="50.0" layoutX="299.0" layoutY="100.0" rotate="-45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross211" endX="50.0" layoutX="98.0" layoutY="203.0" rotate="-42.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross212" endX="50.0" layoutX="102.0" layoutY="199.0" rotate="45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross222" endX="50.0" layoutX="197.0" layoutY="199.0" rotate="45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross221" endX="50.0" layoutX="198.0" layoutY="203.0" rotate="-45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross231" endX="50.0" layoutX="303.0" layoutY="199.0" rotate="-45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross232" endX="50.0" layoutX="300.0" layoutY="199.0" rotate="45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross312" endX="50.0" layoutX="105.0" layoutY="299.0" rotate="-133.6" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross311" endX="50.0" layoutX="105.0" layoutY="299.0" rotate="-45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross321" endX="50.0" layoutX="206.0" layoutY="299.0" rotate="-47.1" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross322" endX="50.0" layoutX="200.0" layoutY="299.0" rotate="48.4" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross331" endX="50.0" layoutX="298.0" layoutY="299.0" rotate="-45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="Cross332" endX="50.0" layoutX="298.0" layoutY="299.0" rotate="45.0" startX="-50.0" strokeWidth="5.0" visible="false" />
+            <Line fx:id="WinH2" endX="150.0" fill="BLACK" layoutX="202.0" layoutY="202.0" startX="-150.0" strokeWidth="5.0" visible="false">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#6f2525" />
+                        <Stop color="#4c13c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line fx:id="WinH1" endX="150.0" fill="BLACK" layoutX="199.0" layoutY="100.0" startX="-150.0" strokeWidth="5.0" visible="false">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#6f2525" />
+                        <Stop color="#4c13c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line fx:id="WinH3" endX="150.0" fill="BLACK" layoutX="200.0" layoutY="301.0" startX="-150.0" strokeWidth="5.0" visible="false">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#6f2525" />
+                        <Stop color="#4c13c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line fx:id="WinV1" endX="150.0" fill="BLACK" layoutX="100.0" layoutY="199.0" rotate="90.0" startX="-150.0" strokeWidth="5.0" visible="false">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#6f2525" />
+                        <Stop color="#4c13c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line fx:id="WinV2" endX="150.0" fill="BLACK" layoutX="200.0" layoutY="199.0" rotate="90.0" startX="-150.0" strokeWidth="5.0" visible="false">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#6f2525" />
+                        <Stop color="#4c13c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line fx:id="WinV3" endY="150.0" fill="BLACK" layoutX="299.0" layoutY="199.0" startY="-150.0" strokeWidth="5.0" visible="false">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#6f2525" />
+                        <Stop color="#4c13c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line fx:id="WinD1" endX="150.0" endY="150.0" fill="BLACK" layoutX="202.0" layoutY="199.0" startX="-150.0" startY="-150.0" strokeWidth="5.0" visible="false">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#6f2525" />
+                        <Stop color="#4c13c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line fx:id="WinD2" endX="150.0" endY="150.0" fill="BLACK" layoutX="203.0" layoutY="199.0" rotate="90.0" startX="-150.0" startY="-150.0" strokeWidth="5.0" visible="false">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#6f2525" />
+                        <Stop color="#4c13c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>
