@@ -570,7 +570,7 @@ public class HelloController {
             WinD2.setVisible(true);
             WinCheck = 2;
         }
-        if (WinCheck != 0 || Move == 9) {
+        if (WinCheck != 0 || Move >= 9) {
             RetryButton.setDisable(false);
             InfoLabel.setText("Draw");
             if (WinCheck == 1) {
