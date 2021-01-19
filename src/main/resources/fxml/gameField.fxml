@@ -17,7 +17,6 @@
                   <Font name="LilyUPC" size="56.0" />
                </font>
             </Label>
-            <Button fx:id="PauseButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Pause" />
             <Button fx:id="MainMenuButton" layoutX="97.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Main Menu" onAction="#openMainMenu"/>
             <Label layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="77.0" text="Player 1">
                <font>
