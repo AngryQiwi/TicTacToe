@@ -127,8 +127,8 @@ public class HelloController {
     private Button RetryButton;
     @FXML
     private Label InfoLabel;
-    public Player player1 = new Player(1, PlayerStatus.wait, 0);
-    public Player player2 = new Player(2, PlayerStatus.wait, 0);
+    public Player player1 = new Player(1, 0);
+    public Player player2 = new Player(2, 0);
     private static int Mode;
     int P1Score = 0;
     int P2Score = 0;
@@ -141,7 +141,7 @@ public class HelloController {
         HelloController.Mode = Mode;
     }
 
-    Computer computer = new Computer(Mode, 2, PlayerStatus.wait, 0);
+    Computer computer = new Computer(Mode, 2, 0);
     public int Move = 0;
 
     int LastPlayerMove;
@@ -242,7 +242,6 @@ public class HelloController {
         Cell32.setDisable(false);
         Cell33.setDisable(false);
 
-        player1.setStatus(PlayerStatus.move);
     }
 
     public void makeAMove11(MouseEvent mouseEvent) {

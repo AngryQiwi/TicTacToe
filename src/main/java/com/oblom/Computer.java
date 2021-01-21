@@ -3,8 +3,8 @@ package com.oblom;
 
 public class Computer extends Player{
     private int Difficulty;
-    public Computer(int Difficulty, int Number, PlayerStatus Status, int Score){
-        super(Number, Status, Score);
+    public Computer(int Difficulty, int Number, int Score){
+        super(Number, Score);
         this.Difficulty = Difficulty;
     }
     public int getDifficulty(){
